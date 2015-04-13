@@ -15,9 +15,9 @@ lines = open(BASE_DIR + '/../data/training-data.tsv').readlines()
 for line in lines:
   name1, name2, relation = line.strip().split('\t')
   if relation=="1":
-    founders_companies.add((name2, name1))  # Add a founder-company relation pair
+    founders_companies.add((name2.lower(), name1.lower()))  # Add a founder-company relation pair
   else:
-    non_founders_companies.add((name2, name1))
+    non_founders_companies.add((name2.lower(), name1.lower()))
 
 # The non-founders_companies lists incompatible relations, e.g. board members, directors...
 
