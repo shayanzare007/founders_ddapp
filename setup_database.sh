@@ -1,12 +1,10 @@
 #! /usr/bin/env bash
+. ./setup_env.sh
 
 # Check the data files
-if ! [ -d data ] \
-  || ! [ -f data/training-data.tsv ] \
-  || ! [ -f data/sentences_dump.csv ] \
-  || ! [ -f data/sentences_dump_large.csv ]; then
-  echo "ERROR: Data files do not exist. Get the founder training dataset ! setup"
-  exit 1;
+if [ -z "$DATA_DIR" ]; then
+    echo "You need to set DATA_DIR variable"
+    exit 1
 fi
 
 if [ $# = 1 ]; then
@@ -24,4 +22,4 @@ createdb $DBNAME
 export APP_HOME=`cd $(dirname $0)/; pwd`
 
 psql -d $DBNAME < $APP_HOME/schema.sql
-psql -d $DBNAME -c "copy sentences from STDIN CSV;" < $APP_HOME/data/sentences_dump_large.csv
+cat $DATA_DIR/sentences-0.tsv | psql -d $DBNAME -c "copy sentences from STDIN;"
