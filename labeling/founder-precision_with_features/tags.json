@@ -1,0 +1,38 @@
+{
+ "version": 1,
+ "key_columns": [
+  "relation_id"
+ ],
+ "by_key": {
+  "NYT_ENG_20080923.0235.LDC2009T13_21_1-NYT_ENG_20080923.0235.LDC2009T13_21_42": {
+   "is_correct": false
+  },
+  "NYT_ENG_20080304.0145.LDC2009T13_383_15-NYT_ENG_20080304.0145.LDC2009T13_383_5": {
+   "is_correct": false
+  },
+  "NYT_ENG_20080425.0047.LDC2009T13_200_30-NYT_ENG_20080425.0047.LDC2009T13_200_8": {
+   "is_correct": false
+  },
+  "AFP_ENG_20071029.0363.LDC2009T13_354_36-AFP_ENG_20071029.0363.LDC2009T13_354_1": {
+   "is_correct": false
+  },
+  "APW_ENG_20070309.0051.LDC2009T13_156_19-APW_ENG_20070309.0051.LDC2009T13_156_0": {
+   "is_correct": false
+  },
+  "APW_ENG_20080510.0685.LDC2009T13_473_11-APW_ENG_20080510.0685.LDC2009T13_473_29": {
+   "is_correct": false
+  },
+  "NYT_ENG_20080101.0143.LDC2009T13_454_9-NYT_ENG_20080101.0143.LDC2009T13_454_40": {
+   "is_correct": false
+  },
+  "eng-WL-11-174592-12942266_12_34-eng-WL-11-174592-12942266_12_19": {
+   "is_correct": false
+  },
+  "eng-NG-31-102093-11829234_416_33-eng-NG-31-102093-11829234_416_21": {
+   "is_correct": false
+  },
+  "APW_ENG_20080915.0328.LDC2009T13_1190_45-APW_ENG_20080915.0328.LDC2009T13_1190_26": {
+   "is_correct": false
+  }
+ }
+}
