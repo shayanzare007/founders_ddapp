@@ -19,7 +19,5 @@ echo "HOST is ${PGHOST}, PORT is ${PGPORT}."
 dropdb $DBNAME
 createdb $DBNAME
 
-export APP_HOME=`cd $(dirname $0)/; pwd`
-
 psql -d $DBNAME < $APP_HOME/schema.sql
-cat $DATA_DIR/sentences-0.tsv | psql -d $DBNAME -c "copy sentences from STDIN;"
+cat $DATA_DIR/sentences-0.tsv | psql -d $DBNAME -c "copy sentences_intermediate from STDIN;"
