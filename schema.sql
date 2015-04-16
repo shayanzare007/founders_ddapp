@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS sentences CASCADE;
 
+DROP TABLE IF EXISTS sentences_intermediate CASCADE;
 CREATE TABLE sentences_intermediate(
   wikipedia_url text,
   sentence_offset bigint,
@@ -11,7 +11,9 @@ CREATE TABLE sentences_intermediate(
   some_vals2 text[],
   some_vals3 int[],
   some_vals4 text[]
-)
+);
+
+DROP TABLE IF EXISTS sentences CASCADE;
 CREATE TABLE sentences(
   document_id text,
   sentence text,
