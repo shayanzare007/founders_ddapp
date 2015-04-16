@@ -20,10 +20,12 @@ dropdb $DBNAME
 createdb $DBNAME
 
 psql -d $DBNAME < $APP_HOME/schema.sql
-cat $DATA_DIR/sentences-0.tsv | psql -d $DBNAME -c "copy sentences_intermediate from STDIN;"
+ghead -n -1 $DATA_DIR/sentences-0.tsv | psql -d $DBNAME -c "copy sentences_intermediate from STDIN;"
 
-offset_url = 36
-SELECT  substring(wikipedia_url from offset_url for char_length(wikipedia_url)-offset_url+1),
+psql -d $DBNAME -c \
+"""
+INSERT INTO sentences
+SELECT  substring(wikipedia_url from 36 for char_length(wikipedia_url)-36+1),
         array_to_string(words,' '),
         words,
         lemma,
@@ -31,6 +33,6 @@ SELECT  substring(wikipedia_url from offset_url for char_length(wikipedia_url)-o
         NULL,
         ner_tags,
         sentence_offset,
-        substring(wikipedia_url from offset_url for char_length(wikipedia_url)-offset_url+1)||'@'||CAST(sentence_offset AS text)
-FROM sentences_intermediate) | sentences
-
+        substring(wikipedia_url from 36 for char_length(wikipedia_url)-36+1)||'@'||CAST(sentence_offset AS text)
+FROM sentences_intermediate
+"""

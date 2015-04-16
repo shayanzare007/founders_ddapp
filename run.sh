@@ -2,9 +2,7 @@
 
 # Check the data files
 if ! [ -d data ] \
-  || ! [ -f data/training-data.tsv ] \
-  || ! [ -f data/sentences_dump.csv ] \
-  || ! [ -f data/sentences_dump_large.csv ]; then
+  || ! [ -f data/training-data.tsv ]; then
   echo "ERROR: Data files do not exist. Get the founder training dataset !"
   exit 1;
 fi

@@ -10,7 +10,7 @@ CREATE TABLE sentences_intermediate(
   lemma text[],
   some_vals2 text[],
   some_vals3 int[],
-  some_vals4 text[]
+  some_vals4 text
 );
 
 DROP TABLE IF EXISTS sentences CASCADE;
