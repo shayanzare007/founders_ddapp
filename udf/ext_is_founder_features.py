@@ -4,6 +4,7 @@ import sys
 import ddlib     # DeepDive python utility
 
 ARR_DELIM = '~^~'
+nbWordsBetweenPeopleCompanyConsidered = 5
 
 # For each input tuple
 for row in sys.stdin:
@@ -27,8 +28,12 @@ for row in sys.stdin:
   
   # Feature 1: Bag of words between the two phrases
   words_between = ddlib.tokens_between_spans(words, span1, span2)
+  count = 1
   for word in words_between.elements:
-    features.add("word_between=" + word)
+    if count < nbWordsBetweenPeopleCompanyConsidered:
+      features.add("word_between=" + word)
+    count ++
+    
 
   # Feature 2: Number of words between the two phrases
   features.add("num_words_between=%s" % len(words_between.elements))
