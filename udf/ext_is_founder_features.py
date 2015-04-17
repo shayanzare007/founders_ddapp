@@ -32,7 +32,7 @@ for row in sys.stdin:
   for word in words_between.elements:
     if count < nbWordsBetweenPeopleCompanyConsidered:
       features.add("word_between=" + word)
-    count ++
+    count +=1
     
 
   # Feature 2: Number of words between the two phrases
