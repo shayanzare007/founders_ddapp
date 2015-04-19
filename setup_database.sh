@@ -20,7 +20,7 @@ dropdb $DBNAME
 createdb $DBNAME
 
 psql -d $DBNAME < $APP_HOME/schema.sql
-ghead -n -1 $DATA_DIR/sentences-0.tsv | psql -d $DBNAME -c "copy sentences_intermediate from STDIN;"
+ghead -n 100000 $DATA_DIR/sentences-0.tsv | psql -d $DBNAME -c "copy sentences_intermediate from STDIN;"
 
 psql -d $DBNAME -c \
 """
