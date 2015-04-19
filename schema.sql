@@ -23,7 +23,7 @@ CREATE TABLE sentences(
   dependencies text[],
   ner_tags text[],
   sentence_offset bigint,
-  sentence_id text -- unique identifier for sentences
+  sentence_id text UNIQUE -- unique identifier for sentences
   );
 
 

@@ -25,12 +25,13 @@ cat $DATA_DIR/sentences-0.tsv | ./filter | psql -d $DBNAME -c "copy sentences_in
 psql -d $DBNAME -c \
 """
 INSERT INTO sentences
-SELECT  substring(wikipedia_url from 36 for char_length(wikipedia_url)-36+1),
+SELECT DISTINCT
+        substring(wikipedia_url from 36 for char_length(wikipedia_url)-36+1),
         array_to_string(words,' '),
         words,
         lemma,
        pos_tags,
-        NULL,
+        some_vals2,
         ner_tags,
         sentence_offset,
         substring(wikipedia_url from 36 for char_length(wikipedia_url)-36+1)||'@'||CAST(sentence_offset AS text)
