@@ -1,5 +1,5 @@
 #number of files of Wikipedia corpus observed, maximum = 47
-n=4
+n=47
 
 #! /usr/bin/env bash
 . ./setup_env.sh
@@ -23,7 +23,7 @@ dropdb $DBNAME
 createdb $DBNAME
 
 psql -d $DBNAME < $APP_HOME/schema.sql
-for i in $(seq 1 $n)
+for i in $(seq 0 $n)
 do 
   ghead -n -1 $DATA_DIR/sentences-$i.tsv | ./filter | psql -d $DBNAME -c "copy sentences_intermediate from STDIN;"
 done
