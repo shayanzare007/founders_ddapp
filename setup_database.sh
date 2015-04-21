@@ -42,5 +42,5 @@ SELECT DISTINCT
         ner_tags,
         sentence_offset,
         substring(wikipedia_url from 36 for char_length(wikipedia_url)-36+1)||'@'||CAST(sentence_offset AS text)
-FROM sentences_intermediate
+FROM sentences_intermediate;
 """
