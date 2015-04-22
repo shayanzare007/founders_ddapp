@@ -43,5 +43,5 @@ for row in sys.stdin:
   if (last_word_left in p2_text):
     features.add("potential_last_name_match")
 
-  for feature in features:  
+  for feature in features:
     print str(relation_id) + '\t' + feature 
