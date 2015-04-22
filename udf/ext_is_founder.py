@@ -31,17 +31,17 @@ for row in sys.stdin:
   p1_text_lower = p1_text.lower()
   p2_text_lower = p2_text.lower()
 
-  # DS rule 1: true if they appear in founders_companies set, 
+  # DS rule 1: true if they appear in founders_companies set,
   is_true = '\N'
   if (p1_text_lower, p2_text_lower) in founders_companies:
     is_true = '1'
-  # DS rule 2: false if they appear in non-founders_companies KB    
+  # DS rule 2: false if they appear in non-founders_companies KB
   elif (p1_text_lower, p2_text_lower) in non_founders_companies:
     is_true = '0'
 
   # Output relation candidates into output table
   print '\t'.join([
-    p1_id, p2_id, sentence_id, 
+    p1_id, p2_id, sentence_id,
     "%s-%s" %(p1_text, p2_text),
     is_true,
     "%s-%s" %(p1_id, p2_id),
