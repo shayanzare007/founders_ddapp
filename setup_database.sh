@@ -14,7 +14,7 @@ if [ $# = 1 ]; then
   export DBNAME=$1
 else
   echo "Usage: bash setup_database DBNAME"
-  DBNAME=deepdive_founder
+DBNAME=deepdive_founder
 fi
 echo "Set DB_NAME to ${DBNAME}."
 echo "HOST is ${PGHOST}, PORT is ${PGPORT}."
@@ -22,12 +22,12 @@ echo "HOST is ${PGHOST}, PORT is ${PGPORT}."
 dropdb $DBNAME
 createdb $DBNAME
 
-psql -d $DBNAME < $APP_HOME/schema.sql
+ psql -d $DBNAME < $APP_HOME/schema.sql
 for i in $(seq 0 $n)
-do 
+do
+  echo $i
   ghead -n -1 $DATA_DIR/sentences-$i.tsv | ./filter | psql -d $DBNAME -c "copy sentences_intermediate from STDIN;"
 done
-
 
 psql -d $DBNAME -c \
 """
@@ -37,8 +37,9 @@ SELECT DISTINCT
         array_to_string(words,' '),
         words,
         lemma,
-       pos_tags,
-        some_vals2,
+        pos_tags,
+        dependency_labels,
+        dependency_parents,
         ner_tags,
         sentence_offset,
         substring(wikipedia_url from 36 for char_length(wikipedia_url)-36+1)||'@'||CAST(sentence_offset AS text)
