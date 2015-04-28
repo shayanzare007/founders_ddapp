@@ -31,5 +31,5 @@ set -e
 deepdive -c $APP_HOME/application.conf
 
 # Generate automatic reports
-#cd $APP_HOME
-#braindump
+cd $APP_HOME
+braindump
