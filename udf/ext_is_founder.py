@@ -31,7 +31,7 @@ for row in sys.stdin:
   pm_text_lower = pm_text.lower()
   cm_text_lower = cm_text.lower()
 
-  # DS rule 1: true if they appear in founders_companies set, 
+  # DS rule 1: true if they appear in founders_companies set,
   is_true = '\N'
   if cm_text_lower in founders_companies:
     if pm_text_lower in founders_companies[cm_text_lower]:
@@ -41,7 +41,7 @@ for row in sys.stdin:
 
   # Output relation candidates into output table
   print '\t'.join([
-    pm_id, cm_id, sentence_id, 
+    pm_id, cm_id, sentence_id,
     "%s-%s" %(pm_text, cm_text),
     is_true,
     "%s-%s" %(pm_id, cm_id),
