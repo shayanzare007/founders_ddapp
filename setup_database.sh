@@ -23,10 +23,10 @@ dropdb $DBNAME
 createdb $DBNAME
 
 psql -d $DBNAME < $APP_HOME/schema.sql
-#for i in $(seq 0 $n)
-#do 
-ghead -n -1 $DATA_DIR/sentences-45.tsv | ./filter | psql -d $DBNAME -c "copy sentences_intermediate from STDIN;"
-#done
+for i in $(seq 0 $n)
+do 
+  ghead -n -1 $DATA_DIR/sentences-45.tsv | ./filter | psql -d $DBNAME -c "copy sentences_intermediate from STDIN;"
+done
 
 
 psql -d $DBNAME -c \
