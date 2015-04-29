@@ -27,9 +27,17 @@ for row in sys.stdin:
     while index < len(words) and ner_tags[index] == "ORGANIZATION":
       index += 1
     if index != start_index:   # found a person from "start_index" to "index"
-      text = ' '.join(words[start_index:index])
       length = index - start_index
-      phrases.append((start_index, length, text))
+      if length%2==0:
+        if words[start_index:(start_index+length/2)] == words[(start_index+length/2):index]:
+          text = ' '.join(words[start_index:(start_index+length/2)])
+          phrases.append((start_index, length/2, text))
+        else:
+          text = ' '.join(words[start_index:index])
+          phrases.append((start_index, length, text))
+      else:
+        text = ' '.join(words[start_index:index])
+        phrases.append((start_index, length, text))
     start_index = index + 1
 
   # Output a tuple for each ORGANIZATION phrase
