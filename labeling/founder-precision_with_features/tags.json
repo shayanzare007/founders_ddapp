@@ -1,0 +1,326 @@
+{
+ "version": 1,
+ "key_columns": [
+  "relation_id"
+ ],
+ "by_key": {
+  "5869984@4_13-5869984@4_0": {
+   "is_correct": true
+  },
+  "36322650@1_25-36322650@1_0": {
+   "is_correct": true
+  },
+  "1734898@1_30-1734898@1_0": {
+   "Company twice": true,
+   "is_correct": true
+  },
+  "20305750@4_23-20305750@4_0": {
+   "is_correct": true
+  },
+  "17067259@12_2-17067259@12_9": {
+   "is_correct": true
+  },
+  "3677285@34_11-3677285@34_0": {
+   "is_correct": true
+  },
+  "20981820@6_13-20981820@6_0": {
+   "is_correct": true
+  },
+  "5972685@4_20-5972685@4_1": {
+   "is_correct": false,
+   "pb extraction company": true
+  },
+  "6697081@7_28-6697081@7_0": {
+   "pb extraction name": true,
+   "is_correct": false
+  },
+  "5259516@3_11-5259516@3_6": {
+   "is_correct": true
+  },
+  "13538649@8_20-13538649@8_0": {
+   "is_correct": true
+  },
+  "6877936@25_15-6877936@25_0": {
+   "is_correct": true
+  },
+  "5297588@10_17-5297588@10_0": {
+   "is_correct": true
+  },
+  "483474@3_29-483474@3_0": {
+   "is_correct": true
+  },
+  "26151150@2_8-26151150@2_0": {
+   "is_correct": true
+  },
+  "15472525@4_11-15472525@4_0": {
+   "is_correct": true
+  },
+  "8790194@3_7-8790194@3_0": {
+   "is_correct": true
+  },
+  "2296421@2_26-2296421@2_2": {
+   "is_correct": false,
+   "pb extraction company": true
+  },
+  "34495803@17_31-34495803@17_0": {
+   "is_correct": false,
+   "features - common words": true
+  },
+  "239930@66_7-239930@66_0": {
+   "is_correct": true
+  },
+  "32958985@3_29-32958985@3_0": {
+   "is_correct": true
+  },
+  "19911121@4_16-19911121@4_0": {
+   "is_correct": true
+  },
+  "181348@25_10-181348@25_0": {
+   "is_correct": true
+  },
+  "7588705@1_15-7588705@1_0": {
+   "is_correct": true
+  },
+  "34042337@4_0-34042337@4_34": {
+   "is_correct": true
+  },
+  "562696@5_26-562696@5_0": {
+   "is_correct": true
+  },
+  "543340@19_17-543340@19_0": {
+   "is_correct": true
+  },
+  "586048@33_2-586048@33_44": {
+   "is_correct": false
+  },
+  "12298734@9_10-12298734@9_0": {
+   "is_correct": true
+  },
+  "58222@60_31-58222@60_0": {
+   "is_correct": true
+  },
+  "9810708@3_8-9810708@3_0": {
+   "is_correct": true
+  },
+  "17245417@7_10-17245417@7_0": {
+   "is_correct": true
+  },
+  "38367@183_56-38367@183_14": {
+   "is_correct": false
+  },
+  "4510792@1_20-4510792@1_0": {
+   "is_correct": true
+  },
+  "2781301@6_8-2781301@6_0": {
+   "is_correct": true
+  },
+  "2502200@20_13-2502200@20_6": {
+   "is_correct": true
+  },
+  "15002680@9_21-15002680@9_0": {
+   "is_correct": false,
+   "pb extraction name - last name issue": true
+  },
+  "42772998@4_16-42772998@4_0": {
+   "is_correct": true
+  },
+  "1025913@4_4-1025913@4_0": {
+   "is_correct": true
+  },
+  "18182838@9_51-18182838@9_2": {
+   "is_correct": true
+  },
+  "175634@80_8-175634@80_0": {
+   "is_correct": true
+  },
+  "2161652@3_12-2161652@3_0": {
+   "is_correct": true
+  },
+  "24092083@1_14-24092083@1_0": {
+   "is_correct": true
+  },
+  "20305750@4_33-20305750@4_0": {
+   "is_correct": true
+  },
+  "723708@1_23-723708@1_0": {
+   "is_correct": true
+  },
+  "170570@8_9-170570@8_0": {
+   "is_correct": true
+  },
+  "9028545@4_7-9028545@4_31": {
+   "is_correct": false
+  },
+  "562696@5_10-562696@5_0": {
+   "is_correct": true
+  },
+  "3300445@9_24-3300445@9_1": {
+   "is_correct": true
+  },
+  "32958985@3_27-32958985@3_0": {
+   "is_correct": true,
+   "Cool pattern person FirstName1 and FirstName2 LastName": true
+  },
+  "22324696@1_22-22324696@1_0": {
+   "is_correct": true
+  },
+  "18632729@5_12-18632729@5_0": {
+   "is_correct": true
+  },
+  "1995918@3_8-1995918@3_0": {
+   "is_correct": true
+  },
+  "31215966@5_20-31215966@5_3": {
+   "is_correct": true
+  },
+  "17403692@2_6-17403692@2_0": {
+   "is_correct": true
+  },
+  "18534295@33_3-18534295@33_5": {
+   "is_correct": true
+  },
+  "12035083@4_15-12035083@4_0": {
+   "is_correct": true,
+   "Cool pattern person FirstName1 and FirstName2 LastName": true
+  },
+  "3612829@11_7-3612829@11_0": {
+   "is_correct": true
+  },
+  "9811445@5_4-9811445@5_0": {
+   "is_correct": true
+  },
+  "552556@6_18-552556@6_1": {
+   "is_correct": true
+  },
+  "34527028@6_9-34527028@6_0": {
+   "is_correct": true
+  },
+  "12529306@1_23-12529306@1_0": {
+   "is_correct": true
+  },
+  "31543806@6_7-31543806@6_0": {
+   "is_correct": true
+  },
+  "9026648@4_12-9026648@4_1": {
+   "is_correct": true
+  },
+  "15035566@3_8-15035566@3_0": {
+   "is_correct": true
+  },
+  "37877883@1_13-37877883@1_0": {
+   "is_correct": true
+  },
+  "1352836@7_32-1352836@7_0": {
+   "is_correct": false,
+   "pb extraction company": true
+  },
+  "18182838@9_9-18182838@9_2": {
+   "is_correct": false,
+   "pb extraction company": true
+  },
+  "3555460@1_15-3555460@1_0": {
+   "is_correct": false,
+   "Company twice": true
+  },
+  "10799658@1_14-10799658@1_3": {
+   "is_correct": false,
+   "pb extraction company": true
+  },
+  "17614300@3_11-17614300@3_0": {
+   "is_correct": true
+  },
+  "6212351@9_13-6212351@9_0": {
+   "is_correct": true
+  },
+  "9935005@7_2-9935005@7_7": {
+   "is_correct": true
+  },
+  "6220600@6_0-6220600@6_4": {
+   "is_correct": true
+  },
+  "972237@9_4-972237@9_0": {
+   "is_correct": true
+  },
+  "19667083@2_42-19667083@2_36": {
+   "is_correct": true
+  },
+  "37718041@6_11-37718041@6_0": {
+   "is_correct": true
+  },
+  "20305750@4_26-20305750@4_0": {
+   "is_correct": true
+  },
+  "29347138@6_17-29347138@6_0": {
+   "is_correct": true
+  },
+  "11702727@5_17-11702727@5_1": {
+   "is_correct": false
+  },
+  "175634@39_14-175634@39_17": {
+   "is_correct": false,
+   "pb extraction company": true
+  },
+  "35139746@5_6-35139746@5_0": {
+   "is_correct": true
+  },
+  "454830@60_17-454830@60_1": {
+   "is_correct": false
+  },
+  "27976360@11_7-27976360@11_0": {
+   "is_correct": true
+  },
+  "38375453@2_4-38375453@2_19": {
+   "is_correct": false,
+   "pb coref/entity linking": true
+  },
+  "5297588@10_20-5297588@10_0": {
+   "is_correct": true
+  },
+  "35885219@4_21-35885219@4_0": {
+   "is_correct": true
+  },
+  "26804367@1_25-26804367@1_3": {
+   "is_correct": false,
+   "Company twice": true
+  },
+  "15223749@7_13-15223749@7_0": {
+   "is_correct": true
+  },
+  "3884609@1_17-3884609@1_0": {
+   "is_correct": false,
+   "Company twice": true
+  },
+  "3436301@8_14-3436301@8_0": {
+   "is_correct": true
+  },
+  "12529306@1_18-12529306@1_0": {
+   "is_correct": true
+  },
+  "3207419@3_6-3207419@3_0": {
+   "is_correct": true
+  },
+  "32616646@9_10-32616646@9_0": {
+   "is_correct": true
+  },
+  "36225562@3_10-36225562@3_0": {
+   "is_correct": true
+  },
+  "5370410@5_15-5370410@5_6": {
+   "is_correct": true
+  },
+  "27026469@1_31-27026469@1_0": {
+   "is_correct": true
+  },
+  "2300636@5_9-2300636@5_1": {
+   "is_correct": true
+  },
+  "4690@4_17-4690@4_0": {
+   "is_correct": false,
+   "pb coref/entity linking": true
+  },
+  "2202520@46_41-2202520@46_0": {
+   "is_correct": false,
+   "features - common words": true
+  }
+ }
+}
