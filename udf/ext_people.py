@@ -32,7 +32,7 @@ for row in sys.stdin:
         if words[index].lower()=="and" and ner_tags[index+1]== "PERSON" and ner_tags[index+2]== "PERSON":
           if (start_index+4)==len(words) or ner_tags[start_index+4] != "PERSON":
             text = ' '.join(words[start_index:index]+words[(index+2):(index+3)])
-            phrases.append((start_index, 2, text))
+            phrases.append((start_index, 1, text))
           else:
             text = ' '.join(words[start_index:index])
             phrases.append((start_index, length, text))
