@@ -36,8 +36,12 @@ for row in sys.stdin:
           text = ' '.join(words[start_index:index])
           phrases.append((start_index, length, text))
       else:
-        text = ' '.join(words[start_index:index])
-        phrases.append((start_index, length, text))
+        if words[start_index:(start_index+length//2)] == words[(start_index+1+length//2):index] and words[start_index+length//2].lower()=="the":
+          text = ' '.join(words[start_index:(start_index+length//2)])
+          phrases.append((start_index, length//2, text))
+        else:
+          text = ' '.join(words[start_index:index])
+          phrases.append((start_index, length, text))
     start_index = index + 1
 
   # Output a tuple for each ORGANIZATION phrase
