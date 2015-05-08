@@ -28,20 +28,16 @@ for row in sys.stdin:
       index += 1
     if index != start_index:   # found a person from "start_index" to "index"
       length = index - start_index
-      if length%2==0:
-        if words[start_index:(start_index+length/2)] == words[(start_index+length/2):index]:
-          text = ' '.join(words[start_index:(start_index+length/2)])
-          phrases.append((start_index, length/2, text))
-        else:
-          text = ' '.join(words[start_index:index])
-          phrases.append((start_index, length, text))
+      start_index_bis=start_index +1
+      while start_index_bis<index and words[start_index_bis] != words[start_index]:
+        start_index_bis +=1
+      length_bis = start_index_bis - start_index
+      if start_index_bis<index and words[start_index:start_index_bis]==words[start_index_bis:(start_index_bis+ length_bis)]:
+        text = ' '.join(words[start_index:start_index_bis])
+        phrases.append((start_index, length_bis, text))
       else:
-        if words[start_index:(start_index+length//2)] == words[(start_index+1+length//2):index] and words[start_index+length//2].lower()=="the":
-          text = ' '.join(words[start_index:(start_index+length//2)])
-          phrases.append((start_index, length//2, text))
-        else:
-          text = ' '.join(words[start_index:index])
-          phrases.append((start_index, length, text))
+        text = ' '.join(words[start_index:index])
+        phrases.append((start_index, length, text))
     start_index = index + 1
 
   # Output a tuple for each ORGANIZATION phrase
