@@ -25,9 +25,23 @@ for row in sys.stdin:
     while index < len(words) and ner_tags[index] == "PERSON":
       index += 1
     if index != start_index:   # found a person from "start_index" to "index"
-      text = ' '.join(words[start_index:index])
       length = index - start_index
-      phrases.append((start_index, length, text))
+
+      #Identify pattern FirstName1 'AND' FirstName2 LastName
+      if length==1 and (start_index+3)<len(words):
+        if words[index].lower()=="and" and ner_tags[index+1]== "PERSON" and ner_tags[index+2]== "PERSON":
+          if (start_index+4)==len(words) or ner_tags[start_index+4] != "PERSON":
+            text = ' '.join(words[start_index:index]+words[(index+2):(index+3)])
+            phrases.append((start_index, 1, text))
+          else:
+            text = ' '.join(words[start_index:index])
+            phrases.append((start_index, length, text))
+        else:
+          text = ' '.join(words[start_index:index])
+          phrases.append((start_index, length, text))
+      else:
+        text = ' '.join(words[start_index:index])
+        phrases.append((start_index, length, text))
     start_index = index + 1
 
   # Output a tuple for each PERSON phrase

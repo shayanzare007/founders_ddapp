@@ -22,7 +22,25 @@ echo "HOST is ${PGHOST}, PORT is ${PGPORT}."
 dropdb $DBNAME
 createdb $DBNAME
 
- psql -d $DBNAME < $APP_HOME/schema.sql
+psql -d $DBNAME < $APP_HOME/schema.sql
+
+psql -d $DBNAME -c \
+"""
+DROP TABLE IF EXISTS sentences_intermediate CASCADE;
+CREATE TABLE sentences_intermediate(
+  wikipedia_url text,
+  sentence_offset bigint,
+  word_ids int[],
+  words text[],
+  pos_tags text[],
+  ner_tags text[],
+  lemma text[],
+  dependency_labels text[],
+  dependency_parents int[],
+  provenances text
+);
+"""
+
 for i in $(seq 0 $n)
 <<<<<<< HEAD
 do

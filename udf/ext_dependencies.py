@@ -15,10 +15,10 @@ for line in sys.stdin:
         for i, label in enumerate(row['dependency_labels']):
             parent_idx = int(row['dependency_parents'][i])
             dependency_string = '{0}({1}-{2}, {3}-{4})'.format(label,
-                                                               row['words'][parent_idx],
+                                                               row['words'][parent_idx-1],
                                                                parent_idx,
                                                                row['words'][i],
-                                                               i)
+                                                               i+1)
             dependency_strings.append(dependency_string)
     except IndexError:
         dependency_strings = None
