@@ -1,18 +1,3 @@
-
--- DROP TABLE IF EXISTS sentences_intermediate CASCADE;
--- CREATE TABLE sentences_intermediate(
---   wikipedia_url text,
---   sentence_offset bigint,
---   word_ids int[],
---   words text[],
---   pos_tags text[],
---   ner_tags text[],
---   lemma text[],
---   dependency_labels text[],
---   dependency_parents int[],
---   provenances text
--- );
-
 DROP TABLE IF EXISTS sentences CASCADE;
 CREATE TABLE sentences(
   document_id text,

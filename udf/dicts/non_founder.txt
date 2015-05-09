@@ -1,3 +1,6 @@
 employee
 investor
 key people
+invest
+acquire
+join
