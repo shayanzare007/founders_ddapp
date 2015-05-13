@@ -13,7 +13,7 @@ import sys
 ARR_DELIM = '~^~'
 names_file = os.getcwd()+'/app/founders_ddapp/data/names.tsv'
 # read names.tsv and put them into a set
-names = set() 
+names = set()
 with open(names_file) as f:
   for i,name in enumerate(f):
     names.add(name.rstrip())
@@ -26,6 +26,8 @@ for row in sys.stdin:
   ner_tags = ner_tags_str.split(ARR_DELIM)
   start_index = 0
   phrases = []
+  if len(words) > 100:
+    continue
 
   while start_index < len(words):
     # Checking if there is a ORGANIZATION phrase starting from start_index
