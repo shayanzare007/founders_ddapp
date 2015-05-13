@@ -42,10 +42,12 @@ for row in sys.stdin:
       length_bis = min(start_index_bis - start_index, index - start_index_bis)
       if start_index_bis<index and words[start_index:(start_index + length_bis)]==words[start_index_bis:(start_index_bis+ length_bis)]:
         text = ' '.join(words[start_index:(start_index + length_bis)])
-        if text in names: phrases.append((start_index, length_bis, text))
+        #if text in names: phrases.append((start_index, length_bis, text))
+        phrases.append((start_index, length_bis, text))
       else:
         text = ' '.join(words[start_index:index])
-        if text in names: phrases.append((start_index, length, text))
+        #if text in names: phrases.append((start_index, length, text))
+        phrases.append((start_index, length, text))
     start_index = index + 1
 
   # Output a tuple for each ORGANIZATION phrase
