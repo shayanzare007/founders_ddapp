@@ -1,6 +1,7 @@
 employee
-investor
-key people
-invest
-acquire
+wife of
+daughter of
+son of
+husband of
 join
+student at

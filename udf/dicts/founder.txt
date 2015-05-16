@@ -1,9 +1,18 @@
 founder
 co-founder
+creator
+owner
 found
+co-found
 create
 establish
 start
-commence
 launch
-
+own
+found by
+create by
+co-founder of
+founder of
+owner of
+creator of
+company founded
